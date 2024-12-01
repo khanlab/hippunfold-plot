@@ -1,5 +1,5 @@
 [project]
-name = "hippunfold-plot"
+name = "hippunfold_plot"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,3 +8,4 @@ dependencies = [
     "matplotlib>=3.9.2",
     "nilearn>=0.10.4",
 ]
+
