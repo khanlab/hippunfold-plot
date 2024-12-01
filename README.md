@@ -38,8 +38,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=densi
 fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=density, view='ventral')
 
 ```
-![png](example1_0.png)
-![png](example1_1.png)
+![png](doc/example1_0.png)
+![png](doc/example1_1.png)
     
 ### Example 2: Plot Left and Right Hemispheres Separately
 
@@ -59,8 +59,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), hemi='right', density=de
 
 ```
     
-![png](example2_0.png)
-![png](example2_1.png)
+![png](doc/example2_0.png)
+![png](doc/example2_1.png)
 
 ### Example 3: Plot unfolded and canonical space separately
 
@@ -79,8 +79,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), space='unfold', density=
 fig = plot_hipp_surf(label_gii.format(density=density), space='canonical', density=density, view='dorsal')
 ```
     
-![png](example3_0.png)
-![png](example3_1.png)
+![png](doc/example3_0.png)
+![png](doc/example3_1.png)
 
 ## 🛠️ Functions
 
