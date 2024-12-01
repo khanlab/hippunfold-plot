@@ -24,7 +24,7 @@ Here are some examples of how to use the `plot_hipp_surf` function to visualize 
 ### Example 1: Plot Both Hemispheres
 
 ```python
-from plotting import plot_hipp_surf
+from hippunfold_plot.plotting import plot_hipp_surf
 from hippunfold_plot.utils import get_resource_path
 
 #get subfields for demonstrating plotting
@@ -33,17 +33,18 @@ density = '1mm'
 
 # Plot dorsal view
 fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=density, view='dorsal')
-fig.show()
 
 # Plot ventral view
 fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=density, view='ventral')
-fig.show()
-```
 
+```
+![png](example1_0.png)
+![png](example1_1.png)
+    
 ### Example 2: Plot Left and Right Hemispheres Separately
 
 ```python
-from plotting import plot_hipp_surf
+from hippunfold_plot.plotting import plot_hipp_surf
 from hippunfold_plot.utils import get_resource_path
 
 #get subfields for demonstrating plotting
@@ -52,17 +53,19 @@ density = '1mm'
 
 # Plot left hemisphere
 fig = plot_hipp_surf(label_gii.format(density=density), hemi='left', density=density, view='dorsal')
-fig.show()
 
 # Plot right hemisphere
 fig = plot_hipp_surf(label_gii.format(density=density), hemi='right', density=density, view='dorsal')
-fig.show()
-```
 
-### Example 3: Plot Unfolded Space
+```
+    
+![png](example2_0.png)
+![png](example2_1.png)
+
+### Example 3: Plot unfolded and canonical space separately
 
 ```python
-from plotting import plot_hipp_surf
+from hippunfold_plot.plotting import plot_hipp_surf
 from hippunfold_plot.utils import get_resource_path
 
 #get subfields for demonstrating plotting
@@ -70,13 +73,14 @@ label_gii = get_resource_path('tpl-avg_label-hippdentate_density-{density}_subfi
 density = '1mm'
 
 # Plot left hemisphere in unfolded space
-fig = plot_hipp_surf(label_gii.format(density=density), space='unfold', hemi='left', density=density, view='dorsal')
-fig.show()
+fig = plot_hipp_surf(label_gii.format(density=density), space='unfold', density=density, view='dorsal')
 
-# Plot right hemisphere in unfolded space
-fig = plot_hipp_surf(label_gii.format(density=density), space='unfold', hemi='right', density=density, view='dorsal')
-fig.show()
+# Plot left hemisphere in canonical space
+fig = plot_hipp_surf(label_gii.format(density=density), space='canonical', density=density, view='dorsal')
 ```
+    
+![png](example3_0.png)
+![png](example3_1.png)
 
 ## 🛠️ Functions
 
