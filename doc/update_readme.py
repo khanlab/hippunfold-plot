@@ -29,7 +29,7 @@ def update_readme(readme_path, docstrings):
         file.writelines(new_lines)
 
 if __name__ == "__main__":
-    import plotting
+    import hippunfold_plot.plotting
     readme_path = 'README.md'
     docstrings = get_function_docstrings(plotting)
     update_readme(readme_path, docstrings)
