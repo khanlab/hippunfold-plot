@@ -28,7 +28,7 @@ jobs:
 
     - name: Update README
       run: |
-        python update_readme.py
+        python doc/update_readme.py
 
     - name: Commit and push changes
       run: |
