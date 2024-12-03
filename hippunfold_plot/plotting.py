@@ -119,6 +119,8 @@ def plot_hipp_surf(
         "avg_method": avg_method,
         "cmap": cmap,
         "view": view,
+        "vmin": vmin,
+        "vmax": vmax,
     }
 
     # add any user arguments
