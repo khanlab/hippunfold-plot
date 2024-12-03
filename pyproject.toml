@@ -1,6 +1,6 @@
 [project]
 name = "hippunfold_plot"
-version = "0.1.1"
+version = "0.1.2"
 description = "Plotting functions for hippocampal surface maps from HippUnfold"
 readme = "README.md"
 requires-python = ">=3.9"
