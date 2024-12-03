@@ -21,16 +21,33 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install .
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+
+    - name: "Set up Python"
+      uses: actions/setup-python@v5
+      with:
+        python-version-file: "pyproject.toml"
+
+    - name: Install the project
+      run: uv sync --all-extras --dev
 
     - name: Update README
       run: |
-        python update_readme.py
+        uv run docs/update_readme.py
+
+
+    - name: Check for changes
+      id: check_changes
+      run: |
+        if git diff --exit-code README.md > /dev/null; then
+          echo "no_changes=true" >> $GITHUB_ENV
+        else
+          echo "no_changes=false" >> $GITHUB_ENV
+        fi
 
     - name: Commit and push changes
+      if: env.no_changes == 'false'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -39,3 +56,4 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

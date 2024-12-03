@@ -9,3 +9,12 @@ dependencies = [
     "nilearn>=0.10.4",
 ]
 
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "pdoc>=15.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
