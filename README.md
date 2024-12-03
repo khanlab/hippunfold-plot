@@ -88,8 +88,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), space='canonical', densi
 
 Plot hippocampal surface map.
 
-This function plots a surface map of the hippocampus, which can be a label-hippdentate shape.gii, func.gii, or a Vx1 array 
-(where V is the number of vertices in the hippocampus and dentate). Any arguments that can be supplied to nilearn's plot_surf() 
+This function plots a surface map of the hippocampus, which can be a label-hippdentate shape.gii, func.gii, or a Vx1 array
+(where V is the number of vertices in the hippocampus and dentate). Any arguments that can be supplied to nilearn's plot_surf()
 can also be applied here, overriding the defaults set below.
 
 ###### Parameters
