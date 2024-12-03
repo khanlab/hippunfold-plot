@@ -9,3 +9,10 @@ dependencies = [
     "nilearn>=0.10.4",
 ]
 
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "pdoc>=15.0.0",
+]
+
+
