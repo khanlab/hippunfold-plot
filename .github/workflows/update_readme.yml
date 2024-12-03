@@ -36,7 +36,17 @@ jobs:
       run: |
         uv run docs/update_readme.py
 
+
+    - name: Check for changes
+      id: check_changes
+      run: |
+        if git diff --exit-code README.md > /dev/null; then
+          echo "no_changes=true" >> $GITHUB_ENV
+        else
+          echo "no_changes=false" >> $GITHUB_ENV
+
     - name: Commit and push changes
+      if: env.no_changes == 'false'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -45,3 +55,4 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
