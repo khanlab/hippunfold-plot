@@ -38,9 +38,7 @@ def update_readme(readme_path, docstrings):
     new_lines = lines[:start_functions + 2]
     for func_name, docstring in docstrings.items():
         new_lines.append(f"### `{func_name}`\n\n")
-        new_lines.append("```python\n")
         new_lines.append(f"{docstring}\n")
-        new_lines.append("```\n\n")
 
     new_lines.extend(lines[end_functions:])
 

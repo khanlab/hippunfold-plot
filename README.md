@@ -38,8 +38,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=densi
 fig = plot_hipp_surf(label_gii.format(density=density), hemi=None, density=density, view='ventral')
 
 ```
-![png](doc/example1_0.png)
-![png](doc/example1_1.png)
+![png](docs/example1_0.png)
+![png](docs/example1_1.png)
     
 ### Example 2: Plot Left and Right Hemispheres Separately
 
@@ -59,8 +59,8 @@ fig = plot_hipp_surf(label_gii.format(density=density), hemi='right', density=de
 
 ```
     
-![png](doc/example2_0.png)
-![png](doc/example2_1.png)
+![png](docs/example2_0.png)
+![png](docs/example2_1.png)
 
 ### Example 3: Plot unfolded and canonical space separately
 
@@ -79,14 +79,13 @@ fig = plot_hipp_surf(label_gii.format(density=density), space='unfold', density=
 fig = plot_hipp_surf(label_gii.format(density=density), space='canonical', density=density, view='dorsal')
 ```
     
-![png](doc/example3_0.png)
-![png](doc/example3_1.png)
+![png](docs/example3_0.png)
+![png](docs/example3_1.png)
 
 ## 🛠️ Functions
 
 ### `plot_hipp_surf`
 
-```python
 Plot hippocampal surface map.
 
 This function plots a surface map of the hippocampus, which can be a label-hippdentate shape.gii, func.gii, or a Vx1 array 
@@ -141,8 +140,6 @@ can also be applied here, overriding the defaults set below.
 ###### Notes
 By default, this function will plot one hemisphere (left by default) in both canonical and unfolded space.
 Both surfaces can be plotted with hemi=None, but the same surf_map will be plotted on both.
-```
-
 ## 🧪 Testing
 
 To run the tests, including unit tests and docstring tests, use the following command:
