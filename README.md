@@ -1,4 +1,4 @@
-# 🧠 hippunfold_surf
+# 🧠 hippunfold_plot
 
 This package provides plotting functions for hippocampal surface maps from HippUnfold (https://github.com/khanlab/hippunfold), 
 wrapping the Nilearn (https://nilearn.github.io) plotting functions (matplotlib engine) to achieve this. 
